@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/swiper2.html">
+    <style>
+        body {
+            margin: 0%;
+        }
+
+        .bback {
+            width: 100%;
+            height: 950px;
+            background-color: rgba(218, 205, 193, 0.842);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .back {
+            width: 100%;
+            height: 950px;
+            background-image: url(/素材/葉守/完.jpg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .name {
+            font-size: 80px;
+            position: absolute;
+            text-align: center;
+            display: block;
+
+        }
+
+        nav {
+            margin: 250px 20px;
+            position: fixed;
+            width: 50px;
+            height: 500px;
+            z-index: 10;
+        }
+
+        .a {
+            list-style-type: none;
+
+        }
+
+        li {
+            width: 30px;
+            height: 30px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+
+        }
+
+        .hatus {
+            width: 100%;
+            height: 900px;
+            background-color: rgb(130, 161, 181);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(/素材/初心/CELEBRATE1.png);
+            background-size: contain;
+        }
+
+        .circle {
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background-color: rgba(218, 205, 193);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .word {
+            width: 520px;
+            height: 500px;
+        }
+
+        .jiorno {
+            width: 900px;
+            height: 900px;
+            background-image: url(/素材/初心/20210305橋魯諾喬巴拿.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: -400px;
+        }
+
+        .maohuohuo {
+            width: 300px;
+            height: 300px;
+            background-image: url(/素材/初心/貓好好.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: -200px;
+            bottom: 0px;
+        }
+
+        .lyuugi {
+            width: 100vw;
+            height: 1000px;
+            position: relative;
+            background-image: url(/素材/入門守則/入門守則背景.png);
+            background-position: center;
+
+
+        }
+
+        .ablock {
+            width: 200px;
+            position: absolute;
+            top: 10%;
+            left: 25%;
+        }
+
+        .bblock {
+            width: 300px;
+            text-align: right;
+            position: absolute;
+            top: 25%;
+            right: 25%;
+        }
+
+        .cblock {
+            width: 350px;
+            position: absolute;
+            top: 60%;
+            left: 18%;
+        }
+
+        .dblock {
+            width: 350px;
+            text-align: right;
+            position: absolute;
+            top: 70%;
+            right: 20%;
+        }
+
+        .eblock {
+            width: 350px;
+            position: absolute;
+            top: 80%;
+            left: 30%;
+        }
+
+        .fblock {
+            width: 350px;
+            text-align: right;
+            position: absolute;
+            top: 90%;
+            right: 25%;
+        }
+
+        .attention {
+            width: 100px;
+            position: absolute;
+            top: 52%;
+            right: calc(50% - 50px);
+        }
+
+        /* 書籍種類滑行 */
+        .manga{
+            width: 100%;
+            height: 900px;
+            background-image: url(/素材/書籍種類/書籍種類大背景-01.jpg);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .mob{
+            width: 100%;
+            height: 50%;
+            background-image: url(/素材/書籍種類/書籍種類大背景草.png);
+            background-repeat: no-repeat;
+            background-size: 105%;
+            position: absolute;
+            bottom: -80px;
+            z-index: 11;
+        }
+        .sub {
+            background-image: url(/素材/書籍種類/淺水艇.png);
+            width: 100%;
+            height: 500px;
+            display: flex;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            background-image: url(/素材/書籍種類/淺見窗.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 20%;
+            height: 80%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .normal{
+            width: 100%;
+            height: 500px;
+            background-image: url(/素材/書籍種類/ae5833b69ec253d24dce23736cbf79ad.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 120%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .normalpic1{
+            width: 300px;
+            height: 400px;
+            background-image: url(/素材/書籍種類/人像-1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .normalpic2{
+            width: 300px;
+            height: 400px;
+            background-image: url(/素材/書籍種類/人像-2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .normalpic3{
+            width: 300px;
+            height: 400px;
+            background-image: url(/素材/書籍種類/人像-3.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .normalpic4{
+            width: 300px;
+            height: 400px;
+            background-image: url(/素材/書籍種類/人像-4.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .word2{
+            display: inline-block;
+
+            color: snow;
+            text-align: center;
+            line-height: 750px;
+        }
+        .kokishin{
+            width: 100%;
+            height: 2368px;
+            display: flex;
+        }
+        .tako{
+            width: 70%;
+            height: 800px;
+            background-image: url(/素材/好奇者/章魚+星球.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: sticky;
+            top: 0;
+        }
+        .scroll{
+            width: 400px;
+            height: 2360px;
+            font-size: 30px;
+            border: 3px solid black;
+
+        }
+        .kokititle{
+            height: 50px;
+            font-weight: 1000;
+            text-align: center;
+            border: 5px solid black;
+
+        }
+        .block1{
+            width: 100%;
+            height: 900px;
+            background-image: url(/素材/好奇者/好奇者一號-01.jpg);
+            background-position: center;
+        }
+        .lititle1{
+            font-size: 20px;
+            text-align: center;
+            line-height: 70px;
+            height: 70px;
+
+        }
+        .pictomonji{
+            height: 600px;
+            position: relative;
+        }
+        .top{
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .stri{
+            -webkit-writing-mode: vertical-lr;
+        }
+        .pica{
+            width: 240px;
+            height: 250px;
+            background-image: url(/素材/好奇者/螢幕擷取畫面\ 2021-03-05\ 141034.png);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .monji{
+            font-size: 22px;
+            position: absolute;
+            bottom: 100px;
+            left: calc(50% - 110px);
+            width: 220px;
+        }
+        .block2{
+            width: 100%;
+            height: 700px;
+            background-image: url(/素材/好奇者/好奇者二號-01-01.jpg);
+            background-position: center;
+        }
+        .card{
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .cardnaka{
+            width: 300px;
+            height: 480px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            
+        }
+        .picb{
+            width: 240px;
+            height: 250px;
+            background-image: url(/素材/好奇者/kid-painting-santa-paper-plate.jpg);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .lititle2{
+            font-size: 20px;
+            line-height: 50px;
+            height: 50px;
+            position: absolute;
+            top: 45%;
+            left: 30%;
+        }
+        .monji1{
+            font-size: 22px;
+            position: absolute;
+            bottom: 70px;
+            left: calc(50% - 110px);
+            width: 220px;
+
+        }
+        .block3{
+            width: 100%;
+            height: 700px;
+            background-image: url(/素材/好奇者/好奇者三號-01.jpg);
+            background-position: center;
+            
+        }
+        .lititle3{
+            font-size: 30px;
+            line-height: 50px;
+            height: 50px;
+            transform:translate(140px) rotate(-10deg);
+        }
+        .top1{
+            display: flex;
+            height: 300px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .monji2{
+            font-size: 22px;
+            width: 60%;
+            position: absolute;
+            top:36%;
+            left: 20%;
+        }
+        .place{
+            width: 100%;
+            height: 920px;
+            background-image: url(/素材/環境/環境圖-01.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .placetitle{
+            font-size: 40px;
+            font-weight: 1000;
+            text-align: center;
+            margin-bottom: 90px;
+        }
+        .placepic{
+            width: 50%;
+            height: 60%;
+            display: flex;
+        }
+        .stripic{
+            height: 100%;
+            width: 40%;
+        }
+        .stripica{
+            background-image: url(/素材/環境/環境圖01.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 60%;
+        }
+        .stripicb{
+            background-image: url(/素材/環境/環境圖02-01.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 40%;
+        }
+        .rightpic{
+            width: 60%;
+            height: 100%;
+
+        }
+        .toppic{
+            background-image: url(/素材/環境/環境圖03-01.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 50%;
+        }
+        .bottompic{
+            height: 50%;
+            display: flex;
+        }
+        .leftpic{
+            background-image: url(/素材/環境/環境圖04.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 50%;
+            height: 100%;
+        }
+        .rightpica{
+            background-image: url(/素材/環境/環境圖05-01.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 50%;
+            height: 100%;
+        }
+        .saigo{
+            background-color: forestgreen;
+            height: 700px; 
+            width: 100%;
+        }
+
+        .saigobottom{
+            background-color: goldenrod;
+            height: 100px;
+
+        }
+        .saigotitle{
+            dis
+            font-size: 40px;
+            font-weight: 1000;
+            text-align: right;
+            margin-bottom: 90px;
+        }
+        .shiko{
+            width: 40%;
+            height: 500px;
+            background-image: url(/素材/書從何來/環境圖.png);
+            background-position: center;
+            background-size: 90%;
+            z-index: 10;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="a">
+            <li class=""></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="bback">
+            <div class="name">
+                <h2>KAWA</h2>
+                <h5>PRIVATR LIBRARIES</h5>
+            </div>
+            <div class="back"></div>
+        </div>
+
+
+    </main>
+    <main>
+        <div class="hatus">
+            <div class="circle">
+                <div class="jiorno"></div>
+                <div class="maohuohuo"></div>
+                <div class="word">
+                    <h3>什麼是河堂</h3>
+                    <p>歡迎造訪類型圖書館。</p>
+                    <p>書店的終極功能是賣書，圖書館的宗旨在館藏與借閱，但對讀者來說，不管是「買書」或「借書」，如何找到更具脈絡與質地的知識？甚或如何覓得趣味相投的同好？有時就得耗費不少無用之功，更何況有些書不見得買得到、借得到。
+                    </p>
+                    <p>有一群人，在思索如何推廣閱讀，經營不同領域知識的深度與脈絡時，回到閱讀的起點，為特定的讀書社群建構了專屬的閱讀空間。這裡的書是非賣品。他們不賣書，賣的是知識和閱讀。
+                    </p>
+                    <h3>為什麼要開河堂</h3>
+                    <p>我喬魯諾●喬巴河有一個夢想，就是開一間圖書館，想要把自己看過覺得好看的書分享出去，比起一個人看更喜歡和伙伴們窩在一個舒適的地方，不會有和別人不同喜好而產生壓抑感，也沒有獨自一人看書的孤獨感。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="lyuugi">
+            <div class="ablock">
+                <h2>開門時間</h2>
+                <p>平日下午4：30~10：00</p>
+                <p>假日全天9：00~10：00</p>
+            </div>
+            <div class="bblock">
+                <h2>收費方法</h2>
+                <p>當日首次收NTD20之後每三小時加收NTD10，到閉店如只剩一小時無須加收。
+                </p>
+                <p>當日收費後會給門票之後憑此票出入。</p>
+            </div>
+            <h2 class="attention">注意事項</h2>
+            <div class="cblock">
+                <p>在門口設有置物櫃，看書前請放好個人物品，堂主有上鎖，怕把鑰匙用丟可以請堂主保管
+                </p>
+            </div>
+            <div class="dblock">
+                <p>請勿把水跟食物帶到有書區域，置物櫃前有設座位可以飲水或飲料，肚子餓可以把食物帶到戶外用餐區食用，堂主也有提供餐具
+                </p>
+            </div>
+            <div class="eblock">
+                <p>如果想要討論請稍微放低音量，謝絕強迫暴雷，如有困難可以找堂主說說(堂主歡迎暴雷╰(°▽°)╯
+                </p>
+            </div>
+            <div class="fblock">
+                <p>堂主只喜歡乖乖不吵鬧不影響別人的小孩，魔王類型小孩請勿帶入內，如要請堂主管教請預約
+                </p>
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="manga">
+            <div class="mob"></div>
+            <div class="sub">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">耽美走向</div>
+                        <div class="swiper-slide">戀愛喜劇</div>
+                        <div class="swiper-slide">熱血冒險</div>
+                        <div class="swiper-slide">支持國產</div>
+                        <div class="swiper-slide">日文</div>
+                        <div class="swiper-slide">國產</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="normalpic1 word2">恐怖小說</div>
+            <div class="normalpic2 word2">物證推理</div>
+            <div class="normalpic3 word2">心證推理</div>
+            <div class="normalpic4 word2">犯罪解說</div>
+        </div>
+    </main>
+    <main>
+        <div class="kokishin">
+            <div class="tako"></div>
+            <div class="scroll">
+                <div class="kokititle">好奇者</div>
+                <div class="block1">
+                    <div class="lititle1">定期影賞</div>
+                    <div class="pictomonji">
+                        <div class="top">
+                            <div class="stri">堂主租片</div>
+                            <div class="pica"></div>
+                            <div class="stri">提供場地</div> 
+                        </div>
+                        <div class="monji">每星期六、日堂主會外租影片，租片以鬼片類以外為主，歡迎夥伴們提供想看的電影名，堂主會一一滿足。</div>
+                    </div>
+                </div>
+                <div class="block2">
+                    <div class="card">
+                        <div class="stri">堂主想學</div>
+                        <div class="cardnaka">
+                            <div class="picb"></div>
+                            <div class="bottom2">
+                                <div class="lititle2">突發奇想課程</div>
+                                <div class="monji1">以繪圖跟日語課為主，不管什麼課程皆會公告，不須繳交材料跟上課費，有興趣的夥伴請直接找堂主報名。</div>
+                            </div>
+                        </div>
+                        <div class="stri">無須付費</div>
+
+                    </div>
+                </div>
+                <div class="block3">
+                    <div class="lititle3">GAME TIME</div>
+                    <div class="pictomonji">
+                        <div class="top1">
+                            <div class="stri">堂主想玩</div>
+                            <div class="stri">大家揍會</div>
+                        </div>
+                        <div class="monji2">當日有意願遊玩人數達標會開放影賞區關門玩桌遊，如果是堂主沒有的也可提出，或者自備，歡迎各路好手。           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="place">
+            <div class="placetitle">河堂樂園</div>
+            <div class="placepic">
+                <div class="stripic">
+                    <div class="stripica"></div>
+                    <div class="stripicb"></div>
+                </div>
+                <div class="rightpic">
+                    <div class="toppic"></div>
+                    <div class="bottompic">
+                        <div class="leftpic"></div>
+                        <div class="rightpica"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main>
+        <div class="saigo">
+            <div class="saigotitle">書怎麼來</div>
+            <div class="shiko">
+                <div class="shikomonjia"></div>
+                <div class="shikomonjib"></div>
+                <div class="shikomonjic"></div>
+                <div class="shikomonjid"></div>
+            </div>
+        </div>
+        <div class="saigobottom"></div>
+    </main>
+
+    <!-- 書籍種類 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            // init: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                '@0.00': {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                '@0.75': {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                '@1.00': {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                '@1.50': {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0%;
+        }
+
+        .nav{
+            border: 1px solid rgb(235, 235, 235);
+            width: 100%;
+            height: 50px;
+            padding: 5px 17px;
+            position: relative;
+        }
+        .front{
+            width: 340px;
+            height: 100%;
+            float: left;
+            position: relative;
+        }
+       
+       .meanchoose{
+           width: 620px;
+           height: 100%;
+           position: absolute;
+           left: calc(50% - 310px);
+           float: none;
+       }
+       .noticechoose{
+
+           width: 300px;
+           height: 100%;
+           float: right;
+       }
+       .logo{
+           width: 40px;
+           height: 40px;
+           border-radius: 50%;
+           float: left;
+           background-image: url(img/FB_LOGO.jpg);
+           background-repeat: no-repeat;
+           background-position: center;
+           background-size: 50px
+           
+           
+       }
+       .search{
+           width: 280px;
+           height: 40px;
+           float: right;
+           background-color: rgb(240, 242, 245);
+           border-radius: 50px;
+           padding: 10px  ;
+       }
+       .search_img{
+           width: 20px;
+           height: 20px;
+           float: left;
+         
+
+       }
+       .search_input{
+           width: 200px;
+           height: 20px;
+           background-color: rgb(240, 242, 245);
+           border: 0px;
+           outline: 1px;
+           
+       }
+       .link{
+           background-color: rgb(230, 178, 142);
+           width: 30px;
+           height: 30px;
+           float: left;
+           margin: 10px 40px 0px 50px;
+           position: relative;
+           
+       }
+       .link_img{
+           width:30px ;
+           height: 30px;
+       }
+       .namber{
+           width: 28px;
+           height: 23px;
+           background-color: rgb(255, 0, 0);
+           position: absolute;
+           right: 100px;
+           top: -10px;
+           border-radius: 25%;
+           padding: 3px 4px;
+           color: cornsilk;
+       }
+       .mainhome{
+           width: 95px;
+           height: 35px;
+           background-color: rgb(231, 243, 255);
+           border-radius: 50px;
+           float: left;
+           padding: 5px;
+       }
+       .name{
+           color: royalblue;
+       }
+       .plus{
+           width: 40px;
+           height: 40px;
+           background-color: rgb(235, 235, 235);
+           float: left;
+           border-radius: 50%;
+           margin: 0px 5px;
+           background-image: url(img/plus.jpg);
+           background-position: center;
+           background-size: 50%;
+           background-repeat: no-repeat;
+       }
+       .massenger{
+           width: 40px;
+           height: 40px;
+           background-color: rgb(235, 235, 235);
+           float: left;
+           border-radius: 50%;
+           margin: 0px 5px;
+           background-image: url(img/messager.jpg);
+           background-position: center;
+           background-size: 50%;
+           background-repeat: no-repeat;
+       }
+       .notice{
+           width: 40px;
+           height: 40px;
+           background-color: rgb(235, 235, 235);
+           float: left;
+           border-radius: 50%;
+           margin: 0px 5px;
+           background-image: url(img/bell.jpg);
+           background-position: center;
+           background-size: 50%;
+           background-repeat: no-repeat;
+       }
+       .more{
+           width: 40px;
+           height: 40px;
+           background-color: rgb(235, 235, 235);
+           float: left;
+           margin: 0px 5px;
+           border-radius: 50%;
+           background-image: url(img/fold.jpg);
+           background-position: center;
+           background-size: 50%;
+           background-repeat: no-repeat;
+       }
+       .picture{
+           width: 25px;
+           height: 25px;
+           border-radius: 50%;
+           background-image: url(img/cat.jpg);
+           background-position: center;
+           background-size:200%;
+           background-repeat: no-repeat;
+           float: left;
+           margin: 0px 5px 0px 0px;
+       }
+       .personalimg{
+           width: 100vw;
+           height: 630px;
+           background-color: rgb(255, 255, 255);
+           position: relative;
+           
+       }
+       .linear2{
+           width: 100vw;
+           height:315px ;
+           background: linear-gradient(rgb(20, 20, 74),rgb(255, 255, 255));
+           
+       }
+      .backpic{
+          width: 1250px;
+          height: 475px;
+          background-color: rgb(199, 220, 252);
+          position: relative;
+          position: absolute;
+          left: calc(50% - 625px);
+          border-radius: 0px 0px 10px 10px;
+          background-image: url(img/96878849_3166342023433037_2197426953647030272_o.jpg);
+      }
+      .linear{
+          background:linear-gradient(rgba(255, 252, 252, 0), rgb(0, 0, 0)); opacity: 0.6;
+          width: 1250px;
+          height: 70px;
+          position: absolute;
+          bottom: 0px;
+          border-radius: 0px 0px 10px 10px;
+
+      }
+      .mainpic{
+          width: 175px;
+          height: 175px;
+          border-radius: 50%;
+          background-color: rgb(255, 255, 255);
+          position: relative;
+          position: absolute;
+          left: calc(50% - 86.5px);
+          bottom: -10px;
+      }
+      .pic{
+          width: 166px;
+          height: 166px;
+          border-radius: 50%;
+          background-image: url(img/cat.jpg);
+          position: absolute;
+          position: relative;
+          top: calc(50% - 83px);
+          left: calc(50% - 83px);
+          background-position: center;
+          background-size: 200%;
+          background-repeat: no-repeat;
+      }
+      .photo{
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-image: url(img/camera.png);
+          background-position: center;
+          background-size: 87%;
+          position: absolute;
+          bottom: 10px;
+          right: 0px;
+      }
+      .addphoto{
+          width: 140px;
+          height: 40px;
+          background-color: rgb(228, 230, 235);
+          position: absolute;
+          bottom: 15px;
+          right: 30px;
+          border-radius: 8px;
+          padding: 12px;
+      }
+      .camera{
+          width: 20px;
+          height: 20px;
+          background-image: url(img/camera.jpg);
+          background-position: center;
+          background-size: 90%;
+          background-repeat: no-repeat;
+          float: left;
+      }
+      .mainname{
+          width: 1195px;
+          height: 90px;
+          position: absolute;
+          bottom: 50px;
+          left: calc(50% - 580px);
+          border-bottom: 1px solid rgb(192, 186, 186);
+      }
+       .mainnameword1{
+           font-size: 40px;
+           text-align: center;
+           line-height: 60px;
+       }
+       .mainnameword2{
+           font-size: 18px;
+           color: rgb(24, 118, 242);
+           text-align: center;
+           line-height: 0px;
+       }
+       .about{
+           width: 1250px;
+           height: 60px;
+           position: absolute;
+           bottom: -10px;
+           left: calc(50% - 625px);
+
+       }
+       .aboutlist{
+           width: 600px;
+           height: 50px;
+           padding: 15px 40px;
+           position: relative;
+       }
+       .listword{
+           font-size: 14px;
+           float: left;
+           margin: 5px 15px 0px;
+           position: relative;
+       }
+       .listmore{
+           width:15px ;
+           height: 15px;
+           background-image: url(img/flod.png);
+           background-position: center;
+           background-size: 90%;
+           background-repeat: no-repeat;
+           position: absolute;
+           right: -15px;
+           bottom: 1px;
+       }
+       .edix{
+           width: 320px;
+           height: 40px;
+           position: relative;
+           position: absolute;
+           right: 0px;
+           top: 2.5px;
+           background-color: rgb(255, 255, 255);
+           padding:5px;
+       }
+       .edixpersonel{
+           width: 120px;
+           height: 32px;
+           background-color: rgb(228, 230, 235);
+           border-radius: 10px;
+           padding: 7px 7px;
+           margin: 0px 5px;
+           float: left;
+           
+       }
+       .edixpersonelword{
+           font-size: 12px;
+          float: right;
+       }
+       .pan{
+           width: 25px;
+           height: 15px;
+           background-image: url(img/pan.jpg);
+           background-size: 70%;
+           background-position: center;
+           
+       }
+       .eye{
+           width: 50px;
+           height: 32px;
+           background-color: rgb(228, 230, 235); ;
+           background-image: url(img/eyes.jpg);
+           background-position: center;
+           background-size: 50%;
+           background-repeat: no-repeat;
+           border-radius: 10px;
+           float: left;
+           margin: 0px 5px;
+        
+
+
+       }
+       .nozo{
+           width: 50px;
+           height: 32px;
+           background-color: rgb(228, 230, 235); ;
+           background-image: url(img/search.jpg);
+           background-position: center;
+           background-size: 50%;
+           background-repeat: no-repeat;
+           border-radius: 10px;
+           float: left;
+           margin: 0px 5px;
+       }
+       .edixmore{
+           width: 50px;
+           height: 32px;
+           background-color: rgb(228, 230, 235); ;
+           background-image: url(img/point.png);
+           background-position: center;
+           background-size: 50%;
+           background-repeat: no-repeat;
+           border-radius: 10px;
+           float: left;
+           margin: 0px 5px;
+       }
+       .news{
+           width: 100vw;
+           height: 100vw;
+           background-color: rgb(228, 230, 235);
+           padding: 10px ;
+           position: relative;
+           
+       }
+       .left{
+           background-color: rgb(230, 178, 142);
+           width: 490px;
+           height: 900px;
+           position: absolute;
+           left: 19.5%;
+       }
+
+       .comp{
+           width:490px ;
+           height: 230px;
+           background-color: white;
+           border-radius: 10px;
+           border: 1px rgb(206, 208, 210);
+           position: relative;
+           padding: 15px;
+       }
+       .picf1{
+           width: 490px;
+           height: 55px;
+       }
+       .picturebox{
+           width: 490px;
+           height: 540px;
+           background-color: white;
+           margin: 10px 0px;
+           padding: 15px;
+           border-radius: 10px;
+           position: relative;
+       }
+       .checkpic{
+           position: absolute;
+           right: 15px;
+           top: 15px;
+       }
+       .picf2{
+           width: 460px;
+           height: 460px;
+           position: absolute;
+           top: 50px;
+       }
+       .picf2_1{
+           width: 480px;
+           height: 150px;
+       }
+       .picf2_2{
+           width: 480px;
+           height: 150px;
+       }
+       .picf2_3{
+           width: 480px;
+           height: 150px;
+       }
+       .piccc{
+           width: 150px;
+           height: 150px;
+           float: left;
+           margin: 2px;
+       }
+       .piccc1{
+           width: 150px;
+           height: 150px;
+           float: left;
+           margin: 2px;
+           border-radius: 10px 0px 0px;
+       }
+       .piccc2{
+           width: 150px;
+           height: 150px;
+           float: left;
+           margin: 2px;
+           border-radius: 0px 10px 0px 0px;
+       }
+       .piccc3{
+           width: 150px;
+           height: 150px;
+           float: left;
+           margin: 2px;
+           border-radius: 0px 0px 0px 10px;
+       }
+       .piccc4{
+           width: 150px;
+           height: 150px;
+           float: left;
+           margin: 2px;
+           border-radius: 0px 0px 10px;
+       }
+       .post{
+           width: 685px;
+           height: 250px;
+           position: relative;
+       }
+       .postnow{
+           width: 685px;
+           height: 120px;
+           background-color: rgb(255, 255, 255);
+           border-radius: 10px;
+           border: 1px rgb(206, 208, 210);
+           
+
+       }
+       .conpost{
+           width: 685px;
+           height: 90px;
+           background-color: white;
+           border-radius: 10px;
+           border: 1px rgb(206, 208, 210);
+           position: absolute;
+           bottom: 20px;
+       }
+       .type{
+           width: 70px;
+           height: 30px;
+           font-size: 18px;
+           font-weight: bold
+
+       }
+       .compword{
+           width: 460px;
+           height: 40px;
+           background-color: rgb(228, 230, 235);
+           border-radius: 10px;
+           margin: 15px 0px;
+           line-height: 40px;
+           text-align: center;
+           
+       }
+       .think{
+           width: 675px;
+           height: 75px;
+           padding: 10px;
+       }
+       .peoplepic{
+           width:40px ;
+           height: 40px;
+           background-image: url(img/cat.jpg);
+           background-position: center;
+           background-size: 200%;
+           background-repeat: no-repeat;
+           border-radius: 50%;
+           float: left;
+
+       }
+       .whatthink{
+           width: 600px;
+           height: 35px;
+           background-color: rgb(240, 242 ,245);
+           border-radius: 20px;
+           border: 0px;
+           padding:0px 12px ;
+           margin: 5px;
+           font-size: 16px;
+
+       }
+       .choosethink1{
+           width: 650px;
+           height: 50px;
+           margin: 0px 10px;
+            border-top: 0.5px solid rgb(216, 214, 214);
+       }
+       
+       .choosethink{
+           width:130px ;
+           height: 40px;
+           float: left;
+           margin: 0px 0px 0px 70px;
+           padding:10px 15px ;
+       }
+       .livevedio{
+          width: 25px;
+          height: 25px;
+           background-image: url(img/vedio.png);
+           background-position: center;
+           background-size: 100%;
+           float: left;
+           margin: 0px 5px 0px 0px;
+       }
+       .picvedio{
+          width: 25px;
+          height: 25px;
+           background-image: url(img/pic.png);
+           background-position: center;
+           background-size: 100%;
+           float: left;
+           margin: 0px 5px 0px 0px;
+       }
+       .livelive{
+          width: 25px;
+          height: 25px;
+           background-image: url(img/flag.png);
+           background-position: center;
+           background-size: 100%;
+           float: left;
+           margin: 0px 5px 0px 0px;
+
+       }
+       .conpostchoose{
+           width: 675px;
+           height: 50px;
+           position: relative;
+           padding: 10px;
+            border-bottom: 0.5px solid rgb(211, 208, 208);
+       }
+       .conpostf{
+           width: 270px;
+           height: 50px;
+           position: absolute;
+           right: 0px;
+           top: 0px;
+           padding:7.5px 5px ;
+           
+       }
+       .conpostg{
+           width: 110px;
+           height: 35px;
+           background-color: rgb(228, 230, 235);
+           float: right;
+           margin: 0px 5px;
+           border-radius:5px;
+           padding: 8px 10px;
+       }
+       .conpostimg2{
+           width: 18px;
+           height: 18px;
+           background-image: url(img/篩選.png);
+           background-position: center;
+           background-size: 100%;
+           float: left;
+       }
+       .conpostword{
+           float: right;
+           font-weight: bold;
+       }
+       .conpostimg1{
+           width: 18px;
+           height: 18px;
+           background-image: url(img/setting.png);
+           background-position: center;
+           background-size: 100%;
+           float: left;
+       }
+       .bigcheck{
+           width: 680px;
+           height: 40px;
+
+       }
+       .checklist{
+           width: 340px;
+           height: 40px;
+           float: right;
+           position: relative;
+           padding: 10px 110px;
+       }
+       .checkword{
+        color:grey ;
+       }
+       .checkimg{
+           width: 20px;
+           height: 20px;
+           background-image: url(img/check.png);
+           background-position: center;
+           background-size: 110%;
+           float: left;
+           margin: 0px 3px 0px 0px;
+
+       }
+       .checkimg1{
+           width: 20px;
+           height: 20px;
+           background-image: url(img/line.png);
+           background-position: center;
+           background-size: 110%;
+           float: left;
+           margin: 0px 3px 0px 0px;
+       }
+       .right{
+           width: 685px;
+           height: 100vw;
+           background-color: hotpink;
+           position: absolute;
+           right: 18%;
+           top: 10px;
+           overflow-y: auto;
+           overflow-x: auto;
+       }
+       .normal{
+           width: 685px;
+           height: 560px;
+           background-color: white;
+           padding:10px 15px ;
+           border-radius: 10px;
+           position: relative;
+           margin:0px 0px 10px;
+       }
+       .nameat{
+           width: 655px;
+           height: 55px;
+       }
+       .name_place{
+           width: 230px;
+           height: 40px;
+           margin: 0px 10px;
+           float: left;
+       }
+       .date{
+           font-size: 10px;
+       }
+       .postlist{
+           width: 30px;
+           height: 30px;
+           float: right;
+           background-image: url(img/point.png);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: 120%;
+       }
+       .textword{
+           width: 655px;
+           height: 80px;
+           background-color: white;
+           font-size: 20px;
+       }
+       .mapmore{
+           width: 685px;
+           height: 270px;
+           background-color: rgb(228, 230, 235);
+           position: absolute;
+           left: 0px;
+       }
+       .map{
+           width: 100vw;
+           height: 180px;
+       }
+       .mise{
+           width: 685px;
+           height:90px ;
+           padding:10px 15px ;
+           position: relative;
+           border-left: 0.5px  solid rgb(224, 221, 221);
+           border-right: 0.5px  solid rgb(224, 221, 221);
+
+       }
+       .misepic{
+           width:60px ;
+           height: 60px;
+           background-image: url(img/tokyocomics2009.445.jpg);
+           border-radius: 50%;
+
+
+       }
+       .miseinfo{
+           font-weight: bold;
+           font-size: 18px;
+           position: absolute;
+           left: 13%;
+           top: calc(50% - 9px);
+
+       }
+       .goodfor{
+           width: 655px;
+           height: 40px;
+           position: absolute;
+           bottom: 100px;
+           padding: 10px 0px;
+           border-bottom:0.5px grey solid ;
+       }
+       .imoji{
+           width: 25px;
+           height: 25px;
+           background-image: url(img/水.png);
+           background-position: center ;
+           background-size: 130%;
+           float: left;
+
+       }
+       .people{
+           color: grey;
+           float: left;
+           margin:  0px 5px;
+       }
+       .sharechoose{
+           width: 655px;
+           height: 40px;
+           position: absolute;
+           bottom: 60px;
+           border-bottom:0.5px grey solid ;
+       }
+       .choosethink3{
+           width: 218px;
+           height: 20px;
+           position: relative;
+           float: left;
+           margin:10px 0px ;
+       }
+       .ctword{
+           text-align: center;
+
+       }
+       .great{
+           width: 25px;
+           height: 25px;
+           background-image: url(img/wgreat.png);
+           background-position: center;
+           position: absolute;
+           left: 30%;
+       }
+       .chat{
+           width: 25px;
+           height: 25px;
+           background-image: url(img/chatchat.png);
+           background-position: center;
+           position: absolute;
+           left: 30%;
+       }
+       .share{
+           width: 25px;
+           height: 25px;
+           background-image: url(img/share.png);
+           background-position: center;
+           position: absolute;
+           left: 30%;
+       }
+       .leftmassenger{
+           width: 655px;
+           height: 55px;
+           position: relative;
+           position: absolute;
+           bottom: 5px;
+           padding: 10px 0px;
+
+       }
+       .peoplems{
+           width: 35px;
+           height: 35px;
+           background-position: center;
+           background-size: 200%;
+           background-image: url(img/cat.jpg);
+           border-radius: 50%;
+           
+       }
+       .karate{
+           width: 600px;
+           height: 35px;
+           background-color: rgb(228, 230, 235);
+           position: absolute;
+           left: 45px;
+           top:10px ;
+           border-radius: 20px;
+           padding: 5px 15px;
+
+       }
+       .iamtired{
+           width: 100px;
+           height: 25px;
+           font-size: 16px;
+           border: 0px;
+           background-color: rgb(228, 230, 235);
+       }
+       .wan{
+           float: right;
+           margin: 1px;
+       }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="nav">
+        <div class="front">
+            <div class="logo"></div>
+            <div class="search">
+                <img src="img/search.jpg" alt="" class="search_img">
+                <input type="text" class="search_input" placeholder="搜尋 Facebook">
+            </div>
+            
+        </div>
+        <div class="meanchoose">
+            <div class="link">
+                <img src="img/home.jpg" alt="" class="link_img">
+            </div>
+            <div class="link">
+                <img src="img/group.jpg" alt="" class="link_img">
+                <div class="namber">9+</div>
+            </div>
+            <div class="link">
+                <img src="img/watch.jpg" alt="" class="link_img">
+            </div>
+            <div class="link">
+                <img src="img/shop.jpg" alt="" class="link_img">
+            </div>
+            <div class="link">
+                <img src="img/game.jpg" alt="" class="link_img">
+                <div class="namber">9+</div>
+            </div>
+        </div>
+        <div class="noticechoose">
+            <div class="mainhome">
+                <div class="picture"></div>
+                <div class="name">鄙人姓張</div>
+            </div>
+            <div class="plus"></div>
+            <div class="massenger"></div>
+            <div class="notice"></div>
+            <div class="more"></div>
+        </div>
+    </div>
+    <div class="personalimg">
+        
+        <div class="backpic">
+            <div class="linear"></div>
+            <div class="mainpic">
+                <div class="pic">
+                    <div class="photo"></div>
+                </div>
+            </div>
+            <div class="addphoto">
+                <div class="camera"></div>
+                <div class="addword">加上封面相片</div>
+            </div>
+        </div>
+        <div class="linear2"></div>
+        <div class="mainname">
+            <div class="mainnameword1">鄙人姓張</div>
+            <div class="mainnameword2">新增個人簡介</div>
+        </div>
+        <div class="about">
+            <div class="aboutlist">
+                <div class="listword">貼文</div>
+                <div class="listword">關於</div>
+                <div class="listword">朋友503</div>
+                <div class="listword">相片</div>
+                <div class="listword">限時動態典藏</div>
+                <div class="listword">影片</div>
+                <div class="listword">更多
+                    <div class="listmore"></div>
+                </div>
+            </div>
+            <div class="edix">
+                <div class="edixpersonel">
+                    <div class="edixpersonelword">編輯個人檔案</div>
+                    <div class="pan"></div>
+                </div>
+                <div class="eye"></div>
+                <div class="nozo"></div>
+                <div class="edixmore"></div>
+            </div>
+        </div>
+    </div>
+    <div class="news" style="table-layout:fixed;">
+        <div class="left">
+            <div class="comp">
+                <div class="type">簡介</div>
+                <div class="compword">編輯詳細資料</div>
+                <div class="compword">新增嗜好</div>
+                <div class="compword">新增精選內容</div>
+            </div>
+            <div class="picturebox">
+                <div class="picf1">
+                    <div class="type">相片</div>
+                    <div class="checkpic">查看所有相片</div>
+                </div>
+                <div class="picf2">
+                    <div class="picf2_1">
+                        <div><img src="img/piccc.png" alt=""class="piccc1"></div>
+                        <div><img src="img/piccc.png" alt=""class="piccc"></div>
+                        <div><img src="img/piccc.png" alt=""class="piccc2"></div>
+                    </div>
+                    <div class="picf2_2">
+                        <div><img src="img/piccc.png" alt=""class="piccc"></div>
+                        <div><img src="img/piccc.png" alt=""class="piccc"></div>
+                        <div><img src="img/piccc.png" alt=""class="piccc"></div>
+                    </div>
+                    <div class="picf2_3">
+                        <div><img src="img/piccc.png" alt=""class="piccc3"></div>
+                        <div><img src="img/piccc.png" alt=""class="piccc"></div>
+                        <div><img src="img/piccc.png" alt=""class="piccc4"></div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="right" style="overflow-x: auto;overflow-y: scroll;width: 700px;">
+            <div class="post">
+                <div class="postnow">
+                    <div class="think">
+                        <div class="peoplepic"></div>
+                        <input type="text" placeholder="在想些什麼？" class="whatthink">
+                    </div>
+                    <div class="choosethink1">
+                        <div class=" choosethink ">
+                            <div class="livevedio"></div>
+                            <div class="ctword">直播視訊</div>
+                        </div>
+                        <div class="choosethink">
+                            <div class="picvedio"></div>
+                            <div class="ctword">相片/影片</div>
+                        </div>
+                        <div class="choosethink">
+                            <div class="livelive"></div>
+                            <div class="ctword">生活要事</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conpost">
+                    <div class="conpostchoose">
+                        <div class="type">貼文</div>
+                        <div class="conpostf">
+                            <div class="conpostg">
+                                <div class="conpostimg1"></div>
+                                <div class="conpostword">管理貼文</div>
+                            </div>
+                            <div class="conpostg">
+                                <div class="conpostimg2"></div>
+                                <div class="conpostword">篩選條件</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bigcheck">
+                        <div class="checklist">
+                            <div class="checkimg"></div>
+                            <div class="checkword">網路檢視</div>
+                        </div>
+                        <div class="checklist">
+                            <div class="checkimg1"></div>
+                            <div class="checkword">清單檢視</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="normal">
+                <div class="nameat">
+                    <div class="peoplepic"></div>
+                    <div class="name_place">
+                        <div class="name1">鄙人姓張</div>
+                        <div class="date">2月17日·台中市</div>
+                    </div>
+                    <div class="postlist"></div>
+                </div>
+                <div class="textword">好餓</div>
+                <div class="mapmore">
+                    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.871058610755!2d120.68161811498874!3d24.14116598439818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d6b52d4fee3%3A0x75d351dcd390a663!2z5p2x5Lqs5Y2h6YCa5ryr55Wr5bCI6LOj5bqX!5e0!3m2!1szh-TW!2stw!4v1616132253870!5m2!1szh-TW!2stw" width="685" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                    <div class="mise">
+                        <div class="misepic"></div>
+                        <div class="miseinfo">東京卡通漫畫專賣店</div>
+                    </div>
+                </div>
+                <div class="goodfor">
+                    <div class="imoji"></div>
+                    <div class="people">喵喵喵和其他喵</div>
+                </div>
+                <div class="sharechoose">
+                    <div class=" choosethink3">
+                        <div class="great"></div>
+                        <div class="ctword">讚</div>
+                    </div>
+                    <div class="choosethink3">
+                        <div class="chat"></div>
+                        <div class="ctword">留言</div>
+                    </div>
+                    <div class="choosethink3">
+                        <div class="share"></div>
+                        <div class="ctword">分享</div>
+                    </div>
+                </div>
+                <div class="leftmassenger">
+                    <div class="peoplems"></div>
+                    <div class="karate">
+                        <input type="text" placeholder="留言......" class="iamtired">
+                        <div class="wan"><img src="img/smail.png" alt=""></div>
+                        <div class="wan"><img src="img/camera3.png" alt=""></div>
+                        <div class="wan"><img src="img/gif.png" alt=""></div>
+                        <div class="wan"><img src="img/kao.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="normal">
+                <div class="nameat">
+                    <div class="peoplepic"></div>
+                    <div class="name_place">
+                        <div class="name1">鄙人姓張</div>
+                        <div class="date">2月17日·台中市</div>
+                    </div>
+                    <div class="postlist"></div>
+                </div>
+                <div class="textword">好餓</div>
+                <div class="mapmore">
+                    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.871058610755!2d120.68161811498874!3d24.14116598439818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d6b52d4fee3%3A0x75d351dcd390a663!2z5p2x5Lqs5Y2h6YCa5ryr55Wr5bCI6LOj5bqX!5e0!3m2!1szh-TW!2stw!4v1616132253870!5m2!1szh-TW!2stw" width="685" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                    <div class="mise">
+                        <div class="misepic"></div>
+                        <div class="miseinfo">東京卡通漫畫專賣店</div>
+                    </div>
+                </div>
+                <div class="goodfor">
+                    <div class="imoji"></div>
+                    <div class="people">喵喵喵和其他喵</div>
+                </div>
+                <div class="sharechoose">
+                    <div class=" choosethink3">
+                        <div class="great"></div>
+                        <div class="ctword">讚</div>
+                    </div>
+                    <div class="choosethink3">
+                        <div class="chat"></div>
+                        <div class="ctword">留言</div>
+                    </div>
+                    <div class="choosethink3">
+                        <div class="share"></div>
+                        <div class="ctword">分享</div>
+                    </div>
+                </div>
+                <div class="leftmassenger">
+                    <div class="peoplems"></div>
+                    <div class="karate">
+                        <input type="text" placeholder="留言......" class="iamtired">
+                        <div class="wan"><img src="img/smail.png" alt=""></div>
+                        <div class="wan"><img src="img/camera3.png" alt=""></div>
+                        <div class="wan"><img src="img/gif.png" alt=""></div>
+                        <div class="wan"><img src="img/kao.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

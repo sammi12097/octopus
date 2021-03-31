@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: block;
+            height: 100px;
+            background-color: aqua;
+        }
+        .inline{
+            display: inline;
+            height: 100px;
+            background-color: greenyellow;
+        }
+
+        .inline-block{
+            background-color: hotpink;
+            display: inline-block;
+            width: 80%;
+            height: 100px;
+        }
+
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>display block的部分，無論內容物多寬，都會占滿整個一行</p>
+    <div class="block">
+        安安我是block
+    </div>
+    
+    <p>display inline，無論內部的文字有多少個，一率都會以一行呈現</p>
+    <p>但是，inline有一個特點。他無法規定高寬給元素，他的高寬只能用內部的元素去撐</p>
+
+    <div class="inline">
+        安安我是inline 安安我是inline 安安我是inline 安安我是inline
+    </div>
+
+    <p>display inline-block 除了可以設定高寬以外，其餘跟inline</p>
+    <div class="inline-block">
+        安安我是inline-block 安安我是inline-block 安安我是inline-block 安安我是inline-block
+    </div>
+
+    <div class="none">
+        哈哈你看不到我你看不到我
+    </div>
+    
+</body>
+</html>

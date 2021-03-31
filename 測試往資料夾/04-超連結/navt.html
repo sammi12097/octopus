@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: 0%;
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            top: 0%;
+            left: 0%;
+            background: royalblue;
+            position: fixed;
+            z-index: 10;
+        }
+        .pic1{
+            background-attachment: fixed;
+            background-image: url(img/3eec92cf893ff06a1464a7d3398ef124.jpg);
+            width: 100%;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .pic2{
+            background-attachment: fixed;
+            background-image: url(img/螢幕擷取畫面\ 2021-03-09\ 165406.png);
+            width: 100%;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .pic3{
+            background-attachment: fixed;
+            background-image: url(img/9a45f9ba88228527ed9f021151886a42.jpg);
+            width: 100%;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        .text{
+            width: 100%;
+            height: 300px;
+            background-color: seagreen;
+            text-align: center;
+            line-height: 200px;
+        }
+        .zipper{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            top: -50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#anchor1">pic1</a>
+        <a href="#anchor2">pic2</a>
+        <a href="#anchor3">pic3</a>
+    </div>
+ 
+    <div class="pic1" id="anchor1"></div>
+    <div class="text">旺旺旺</div>
+    <div class="pic2">
+        <div class="zipper" id="anchor2"></div>
+    </div>
+    <div class="text">旺旺旺</div>
+    <div class="pic3">
+        <div class="zipper" id="anchor3"></div>
+    </div>
+    <div class="text">旺旺旺</div>
+
+    
+
+</body>
+</html>

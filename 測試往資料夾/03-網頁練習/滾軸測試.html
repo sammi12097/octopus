@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigtb{
+            width: 600px;
+            height: 600px;
+            background-color: teal;
+            margin: auto;
+        }
+        .lefttb{
+            width: 200px;
+            height: 300px;
+            background-image: url(/00-基礎/章魚+星球.jpg);
+            background-position: center;
+            background-size: contain;
+            float: left;
+        }
+        .roll{
+            width: 300px;
+            height: 300px;
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+        .righttb{
+            width: 280px;
+            height: 700px;
+            background-image: url(img/96878849_3166342023433037_2197426953647030272_o.jpg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bigtb" style="table-layout: fixed;" >
+        <div class="lefttb"></div>
+        <div class="roll" style="overflow-x: auto;overflow-y:hidden;margin-top: 15px;margin-left: 0px;">
+            <div class="righttb" style="table-layout: fixed;"></div>
+        </div>
+    </div>
+</body>
+</html>

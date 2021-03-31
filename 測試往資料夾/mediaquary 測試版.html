@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            display: flex;
+        }
+        @media (max-width: 1920px) {
+           
+            nav {
+                width: 365px;
+                height: 100vh;
+                background-color: cadetblue;
+                padding: 75px 110px;
+                box-sizing: border-box;
+                
+            }
+
+            .logo {
+                width: 150px;
+                height: 150px;
+                background-color: chartreuse;
+                margin: 0px 0px 60px;
+            }
+
+            .list {
+                width: 150px;
+                height: 40px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            main {
+                width: 100%;
+                height: 100vh;
+                background-color: cornflowerblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .container {
+                width: 960px;
+                height: 570px;
+                background-color: rgb(208, 219, 240);
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .boxX {
+                height: 570px;
+                width: 318px;
+                background-color: cornsilk;
+                text-align: center;
+                line-height: 570px;
+                font-size: 72px;
+            }
+
+            .boxY {
+                height: 570px;
+                width: 318px;
+                background-color: rgb(209, 195, 140);
+                text-align: center;
+                line-height: 570px;
+                font-size: 72px;
+            }
+
+            .boxZ {
+                height: 570px;
+                width: 318px;
+                background-color: rgb(235, 209, 107);
+                font-size: 72px;
+                text-align: center;
+                line-height: 570px;
+            }
+        }
+
+        @media (max-width: 1360px) {
+            nav {
+                width: 360px;
+                height: 1024px;
+                background-color: cadetblue;
+                padding: 75px 110px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .logo {
+                width: 155px;
+                height: 155px;
+                background-color: chartreuse;
+                margin: 0px 0px 60px;
+            }
+
+            .menu {
+                width: 90px;
+                height: 110px;
+            }
+
+            .list {
+                width: 155px;
+                height: 37px;
+                font-size: 20px;
+                text-align: center;
+
+            }
+
+            main {
+                width: 920px;
+                height: 1024px;
+                background-color: darkcyan;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                width: 800px;
+                height: 570px;
+                background-color: rgb(231, 209, 151);
+                display: flex;
+                justify-content: space-between;
+                align-content: space-between;
+                flex-wrap: wrap;
+
+            }
+
+            .boxX {
+                width: 800px;
+                height: 285px;
+                background-color: darkred;
+                text-align: center;
+                line-height: 285px;
+            }
+
+            .boxY {
+                width: 395px;
+                height: 275px;
+                background-color: rgb(224, 75, 75);
+                text-align: center;
+                line-height: 285px;
+            }
+
+            .boxZ {
+                width: 395px;
+                height: 275px;
+                background-color: rgb(243, 170, 170);
+                text-align: center;
+                line-height: 285px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body{
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                height: 100px;
+                background-color: darkseagreen;
+                padding: 10px 30px;
+                position: fixed;
+                position: relative;
+                box-sizing: border-box;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                background-color: darkslategrey;
+            }
+
+            .menu {
+                width: 420px;
+                height: 80px;
+                position: absolute;
+                top: 10px;
+                right: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+            }
+
+            .list {
+                width: 100px;
+                height: 30px;
+                font-size: 23px;
+                text-align: center;
+                color: rgb(75, 73, 73);
+            }
+
+            main {
+                width: 100%;
+                height: 924px;
+                background-color: rgb(148, 190, 233);
+                padding: 50px 0px;
+
+            }
+
+            .container {
+                margin: auto;
+                background-color: forestgreen;
+                display: flex;
+                justify-content: space-between;
+                align-content: space-between;
+                flex-wrap: wrap;
+                width: 92%;
+                height: 800px;
+            }
+
+            .boxX {
+                width: 100%;
+                height: 400px;
+                background-color: gold;
+                font-size: 100px;
+                text-align: center;
+                line-height: 400px;
+            }
+
+            .boxY {
+                width: 49%;
+                height: 390px;
+                background-color: rgb(155, 142, 67);
+                font-size: 100px;
+                text-align: center;
+                line-height: 400px;
+            }
+
+            .boxZ {
+                width: 50%;
+                height: 390px;
+                background-color: rgb(105, 93, 26);
+                font-size: 100px;
+                text-align: center;
+                line-height: 400px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            nav {
+                width: 100%;
+                height: 80px;
+                background-color: sienna;
+                display: flex;
+                position: relative;
+            }
+
+            .menu {
+                width: 50px;
+                height: 50px;
+                background-color: skyblue;
+                position: absolute;
+                left: 15px;
+                top: calc(50% - 25px);
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                background-color: slateblue;
+                position: absolute;
+                left: calc(50% - 25px);
+                top: calc(50% - 25px);
+            }
+
+            .list {
+                display: none;
+            }
+
+            main {
+                width: 100%;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .boxX {
+                width: 100%;
+                height: 200px;
+                background-color: slateblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 72px;
+            }
+
+            .boxY {
+                width: 100%;
+                height: 200px;
+                background-color: springgreen;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 72px;
+            }
+
+            .boxZ {
+                width: 100%;
+                height: 200px;
+                background-color: salmon;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 72px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="" class="logo" alt="">
+        <div class="menu">
+            <div class="list">選項A</div>
+            <div class="list">選項B</div>
+            <div class="list">選項C</div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="boxX">X</div>
+            <div class="boxY">Y</div>
+            <div class="boxZ">Z</div>
+        </div>
+    </main>
+
+</body>
+
+</html>

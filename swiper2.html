@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Demo styles -->
+  <style>
+  
+
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide{
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(/素材/書籍種類/Jonkheer-Jan-anssens-Governor-of-the-Cape-Colony-and-Governor-General-of-the-Dutch-East-Indies-Jan-Willem-Pieneman-Oil-Painting.webp)"></div>
+      <div class="swiper-slide" style="background-image:url(/素材/書籍種類/ae5833b69ec253d24dce23736cbf79ad.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/素材/書籍種類/7266ced0ab314268b00c1ee491f82c27.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/素材/書籍種類/Jonkheer_Jan_Willem_Janssens_\(1762-1838\)._Gouverneur_van_de_Kaapkolonie_en_gouverneur-generaal_van_Nederlands_Oost_Indië_Rijksmuseum_SK-A-2219.jpeg)"></div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container1', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+  
+</body>
+
+</html>
